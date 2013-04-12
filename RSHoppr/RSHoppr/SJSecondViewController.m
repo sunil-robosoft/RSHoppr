@@ -28,6 +28,7 @@
     [super viewDidLoad];
     NSLog(@"viewDidLoad       viewDidLoad");
     //Added in developer project
+    //Added in document project
     // Do any additional setup after loading the view from its nib.
 }
 
