@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8423A3D01717DAB700D476B3 /* SJSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8423A3CE1717DAB700D476B3 /* SJSecondViewController.m */; };
+		8423A3D11717DAB700D476B3 /* SJSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8423A3CF1717DAB700D476B3 /* SJSecondViewController.xib */; };
 		84F9E42B17169B5C009A2E64 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F9E42A17169B5C009A2E64 /* UIKit.framework */; };
 		84F9E42D17169B5C009A2E64 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F9E42C17169B5C009A2E64 /* Foundation.framework */; };
 		84F9E42F17169B5C009A2E64 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F9E42E17169B5C009A2E64 /* CoreGraphics.framework */; };
@@ -21,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8423A3CD1717DAB700D476B3 /* SJSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJSecondViewController.h; sourceTree = "<group>"; };
+		8423A3CE1717DAB700D476B3 /* SJSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJSecondViewController.m; sourceTree = "<group>"; };
+		8423A3CF1717DAB700D476B3 /* SJSecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SJSecondViewController.xib; sourceTree = "<group>"; };
 		84F9E42617169B5C009A2E64 /* RSHoppr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSHoppr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F9E42A17169B5C009A2E64 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		84F9E42C17169B5C009A2E64 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -89,6 +94,9 @@
 				84F9E44317169B5C009A2E64 /* SJViewController.m */,
 				84F9E44517169B5C009A2E64 /* SJViewController.xib */,
 				84F9E43117169B5C009A2E64 /* Supporting Files */,
+				8423A3CD1717DAB700D476B3 /* SJSecondViewController.h */,
+				8423A3CE1717DAB700D476B3 /* SJSecondViewController.m */,
+				8423A3CF1717DAB700D476B3 /* SJSecondViewController.xib */,
 			);
 			path = RSHoppr;
 			sourceTree = "<group>";
@@ -164,6 +172,7 @@
 				84F9E43F17169B5C009A2E64 /* Default@2x.png in Resources */,
 				84F9E44117169B5C009A2E64 /* Default-568h@2x.png in Resources */,
 				84F9E44717169B5C009A2E64 /* SJViewController.xib in Resources */,
+				8423A3D11717DAB700D476B3 /* SJSecondViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +186,7 @@
 				84F9E43717169B5C009A2E64 /* main.m in Sources */,
 				84F9E43B17169B5C009A2E64 /* SJAppDelegate.m in Sources */,
 				84F9E44417169B5C009A2E64 /* SJViewController.m in Sources */,
+				8423A3D01717DAB700D476B3 /* SJSecondViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +300,7 @@
 				84F9E44C17169B5C009A2E64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
