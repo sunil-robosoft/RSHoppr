@@ -8,6 +8,9 @@
 
 #import "SJViewController.h"
 #import "SJSecondViewController.h"
+#import "HRDataSourceController.h"
+
+#define kConfigCMSURL @"http://timesofindia.indiatimes.com/ipl/2013/cricfeeds.cms"
 
 @interface SJViewController ()
 
@@ -29,9 +32,47 @@
 
 - (IBAction)didClickMeTap:(id)sender
 {
-    SJSecondViewController *sVw=[[SJSecondViewController alloc]initWithNibName:@"SJSecondViewController" bundle:nil];
-    sVw.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-    [self presentViewController:sVw animated:YES completion:nil];
+    HRDataSourceController *sharedViewController=[HRDataSourceController sharedController];
+
+    [sharedViewController parseDataContentsAtURL:kConfigCMSURL requestType:eHTTPGetRequest details:nil ofSection:eSectionTypeFeaturedTiles withViewControllerType:eHomeViewController completion:^(id result, NSError *error,RSSParserType type){
+        if (error==nil) {
+            if (type==eSectionTypeFeaturedTiles)
+            {
+                NSLog(@"%@",result);
+            }
+            
+        }
+        else
+        {
+            NSLog(@"%@",error);
+        }
+    }];
+    
+  //  [self performSelector:@selector(cancelOperation) withObject:nil afterDelay:0.2];
+    
 }
 
+- (IBAction)didClickMeAlsoTap:(id)sender
+{
+    HRDataSourceController *sharedViewController=[HRDataSourceController sharedController];
+    [sharedViewController cancelAllOperationsForViewControllerType:eHomeViewController];
+    [sharedViewController parseDataContentsAtURL:kConfigCMSURL requestType:eHTTPGetRequest details:nil ofSection:eSectionTypeFeaturedTiles withViewControllerType:eHomeViewController completion:^(id result, NSError *error,RSSParserType type){
+        if (error==nil) {
+            if (type==eSectionTypeFeaturedTiles)
+            {
+                NSLog(@"%@",result);
+            }
+            
+        }
+        else
+        {
+            NSLog(@"%@",error);
+        }
+    }];
+ 
+}
+-(void)cancelOperation
+{
+    [[HRDataSourceController sharedController] cancelAllOperationsForViewControllerType:eHomeViewController];
+}
 @end

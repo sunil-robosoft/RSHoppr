@@ -11,4 +11,5 @@
 @interface SJViewController : UIViewController
 
 - (IBAction)didClickMeTap:(id)sender;
+- (IBAction)didClickMeAlsoTap:(id)sender;
 @end
