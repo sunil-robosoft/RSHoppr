@@ -32,6 +32,7 @@
 
 - (IBAction)didClickMeTap:(id)sender
 {
+    _clickMeLabel.text=@"";
     HRDataSourceController *sharedViewController=[HRDataSourceController sharedController];
 
     [sharedViewController parseDataContentsAtURL:kConfigCMSURL requestType:eHTTPGetRequest details:nil ofSection:eSectionTypeFeaturedTiles withViewControllerType:eHomeViewController completion:^(id result, NSError *error,RSSParserType type){
@@ -39,6 +40,7 @@
             if (type==eSectionTypeFeaturedTiles)
             {
                 NSLog(@"%@",result);
+                _clickMeLabel.text=@"didClickMe Tapped";
             }
             
         }
@@ -54,6 +56,7 @@
 
 - (IBAction)didClickMeAlsoTap:(id)sender
 {
+    _clickmealsoLabel.text=@"";
     HRDataSourceController *sharedViewController=[HRDataSourceController sharedController];
     [sharedViewController cancelAllOperationsForViewControllerType:eHomeViewController];
     [sharedViewController parseDataContentsAtURL:kConfigCMSURL requestType:eHTTPGetRequest details:nil ofSection:eSectionTypeFeaturedTiles withViewControllerType:eHomeViewController completion:^(id result, NSError *error,RSSParserType type){
@@ -61,6 +64,7 @@
             if (type==eSectionTypeFeaturedTiles)
             {
                 NSLog(@"%@",result);
+                _clickmealsoLabel.text=@"didClickMeAlso Tapped";
             }
             
         }

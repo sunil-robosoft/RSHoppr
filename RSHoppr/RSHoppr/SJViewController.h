@@ -12,4 +12,6 @@
 
 - (IBAction)didClickMeTap:(id)sender;
 - (IBAction)didClickMeAlsoTap:(id)sender;
+@property (strong, nonatomic) IBOutlet UILabel *clickMeLabel;
+@property (strong, nonatomic) IBOutlet UILabel *clickmealsoLabel;
 @end

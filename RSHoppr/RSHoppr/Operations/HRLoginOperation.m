@@ -39,14 +39,18 @@
             SBJsonParser *parser=[[SBJsonParser alloc] init];
             NSDictionary *theResponse = [parser objectWithData:mReceivedData];
             dispatch_async(dispatch_get_main_queue(),^{
-                handler(theResponse,nil,self.type);
+                if (handler) {
+                    handler(theResponse,nil,self.type);
+                }
             } );
         }
         else
         {
             NSError *userInfoError = [NSError errorWithDomain:kEmptyResponseErrorDomain code:eNotFound userInfo:nil];
             dispatch_async(dispatch_get_main_queue(),^{
+                if (handler) {
                 handler(nil,userInfoError,self.type);
+                }
             } );
         }
     }

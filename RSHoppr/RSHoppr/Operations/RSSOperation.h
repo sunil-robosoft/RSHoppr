@@ -35,7 +35,7 @@ typedef void (^SJCompletionHandler)(id result,NSError *error,RSSParserType type)
     SJViewControllerType viewControllerType;
 }
 @property (nonatomic,assign) SJViewControllerType viewControllerType;
-@property (nonatomic,strong) SJCompletionHandler handler;
+@property (nonatomic,copy) SJCompletionHandler handler;
 @property (strong,nonatomic) NSError *error;
 @property (assign,nonatomic) RSSParserType type;
 @property (strong, nonatomic) NSMutableURLRequest   *urlRequest;
