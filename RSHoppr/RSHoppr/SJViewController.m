@@ -32,7 +32,7 @@
 
 - (IBAction)didClickMeTap:(id)sender
 {
-    _clickMeLabel.text=@"";
+    //_clickMeLabel.text=@"";
     HRDataSourceController *sharedViewController=[HRDataSourceController sharedController];
 
     [sharedViewController parseDataContentsAtURL:kConfigCMSURL requestType:eHTTPGetRequest details:nil ofSection:eSectionTypeFeaturedTiles withViewControllerType:eHomeViewController completion:^(id result, NSError *error,RSSParserType type){
